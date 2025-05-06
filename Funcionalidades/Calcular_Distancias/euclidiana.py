@@ -1,5 +1,5 @@
 import math
-from Clases import cPatron
+from Clases.cPatron import cPatron
 
 def Calcular_Euclidiana(patron1: cPatron, patron2:cPatron) -> float:
     carac1=patron1.caracteristicas

@@ -1,7 +1,7 @@
 import math
-from Clases import cPatron
+from Clases.cPatron import cPatron
 
-def Manhattan(patron1:cPatron,patron2:cPatron) -> float:
+def calcular_Manhattan(patron1:cPatron,patron2:cPatron) -> float:
     carac1=patron1.caracteristicas
     carac2=patron2.caracteristicas
 
