@@ -1,12 +1,12 @@
 class cPatron():
-    def __init__(self, caracteristicas: list[float], etiqueta: str = "") -> None:
+    def __init__(self, caracteristicas: list[float]) -> None:
         self.caracteristicas = caracteristicas
-        self.etiqueta = etiqueta
 
 
     def imprimirPatron(self) -> None:
         for valor in self.caracteristicas:
             print(valor)
 
-
+    def getCaracteristicas(self)->"caracteristicas":
+        return self.caracteristicas
 

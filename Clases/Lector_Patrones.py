@@ -1,6 +1,8 @@
 
 import numpy as np
 
+def LeerConsola()-> list[float]:
+    return list(map(float, input("Introduce un vector en R³ separado por espacios: ").split(" ",1)))
 
 def LeerEtiquetas()-> list[str]:
     etiquetas=[]
