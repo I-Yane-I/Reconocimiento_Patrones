@@ -1,2 +1,2 @@
-manzana (1,1)
-pera (1,2)
+manzana (1,1,3)
+pera (1,2,4)

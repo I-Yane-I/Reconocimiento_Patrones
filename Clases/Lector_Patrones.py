@@ -1,10 +1,13 @@
 
 import numpy as np
+from CClases import Clase as cl
+
+
 
 def LeerConsola()-> list[float]:
     return list(map(float, input("Introduce un vector en R³ separado por espacios: ").split(" ",1)))
 
-def LeerEtiquetas()-> list[str]:
+def LeerEtiqueta()-> list[str]:
     etiquetas=[]
     with open("../Patrones/patrones.txt","r") as nombres:
         for linea in nombres:
@@ -21,8 +24,12 @@ def LeerPatrones()-> list[float]:
         for linea in archivo:
             valores = linea.strip().split(" ", 1)[1]  # separa la fruta y el valor en arrays diferentes
             valores = np.array(eval(valores),dtype=float)  # evalue convierte valores a tupla (1,2,3)
-
-            valores = np.append(valores, 1)  # si es r2 lo transforma a r3
+            if len(linea.strip().split(" ", 1)[1])<3 :
+                valores = np.append(valores, 1)  # si es r2 lo transforma a r3
             patrones.append(valores)  # Guardar en lista
 
     return patrones
+
+def iniciarlizarClases(clase:cl):#filtrar etiquetas para que no se repitan y crear las clases sin repetirse
+    etiquetas=LeerEtiqueta()
+    patrones=LeerPatrones()
